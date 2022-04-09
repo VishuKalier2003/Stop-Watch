@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #3C3744;
+}
+
+#name {
+    position: absolute;
+    left: 35%;
+    font-family: Orbitron;
+    color: #EE2E31;
+    font-size: 32px;
+    top: 20px;
+}
+
+@keyframes animate {
+    0% {
+        border-left: solid #2D7DD2 4px;
+        border-right: solid #2D7DD2 1px;
+        border-top: solid #2D7DD2 4px;
+        border-bottom: solid #2D7DD2 1px;
+        box-shadow: -4px -4px 6px 6px #2E99B6;
+    }
+    33.3% {
+        border-top: solid #2D7DD2 4px;
+        border-left: solid #2D7DD2 1px;
+        border-right: solid #2D7DD2 4px;
+        border-bottom: solid #2D7DD2 1px;
+        box-shadow: 4px -4px 6px 6px #2E99B6;
+    }
+    66.6% {
+        border-right: solid #2D7DD2 4px;
+        border-left: solid #2D7DD2 1px;
+        border-top: solid #2D7DD2 1px;
+        border-bottom: solid #2D7DD2 4px;
+        box-shadow: 4px 4px 6px 6px #2E99B6;
+    }
+    100% {
+        border-bottom: solid #2D7DD2 4px;
+        border-top: solid #2D7DD2 1px;
+        border-left: solid #2D7DD2 4px;
+        border-right: solid #2D7DD2 1px;
+        box-shadow: -4px 4px 6px 6px #2E99B6;
+    }
+}
+
+#stop-clock {
+    /*For parent tags we usually use absolute position*/
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    border: solid;
+    display: grid;
+    border: none;
+    grid-template-columns: repeat(3, 30px);
+    /*30 px is the width, since grid template is columns*/
+    grid-gap: 50px;
+    width: 450px;
+    background-color: #3C3744;
+    height: 100px;
+    font-family: Orbitron;
+    color: white;
+    animation: animate 4s ease-in-out infinite;
+}
+
+#stop-watch {
+    position: absolute;
+    top: 150px;
+    left: 35%;
+    width: 400px;
+    height: 50px;
+    font-family: Orbitron;
+    font-size: 32px;
+    letter-spacing: 20px;
+    color: #2D7DD2;
+}
+
+.time {
+    /*For children tags we usually use relative position*/
+    position: relative;
+    padding: 4px;
+    width: 50px;
+    left: 100px;
+    text-align: right;
+    height: 20px;
+    letter-spacing: 2px;
+}
+
+#button-section {
+    position: absolute;
+    top: 250px;
+    left: 26%;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-gap: 120px;
+}
+
+#button-section>button {
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+}
+
+#btn-start {
+    position: relative;
+    border: solid #2E99B6 3px;
+    background-color: #2EC4B6;
+    color: #822E76;
+}
+
+#btn-reset {
+    position: relative;
+    border: solid #E5A552 3px;
+    background-color: #E5D352;
+    color: #822E76;
+}
+
+#btn-stop {
+    position: relative;
+    border: solid #EE2E76 3px;
+    background-color: #EE2E31;
+    color: #822E76;
+}
+
+#btn-start:focus {
+    box-shadow: 4px 4px 0px 4px #2E99B6, -4px -4px 0px 4px #2E99B6;
+    border-radius: 50%;
+    letter-spacing: 2px;
+}
+
+#btn-reset:focus {
+    box-shadow: 4px 4px 0px 4px #E5A552, -4px -4px 0px 4px #E5A552;
+    border-radius: 50%;
+    letter-spacing: 2px;
+}
+
+#btn-stop:focus {
+    box-shadow: 4px 4px 0px 4px #EE2E76, -4px -4px 0px 4px #EE2E76;
+    border-radius: 50%;
+    letter-spacing: 2px;
+}
